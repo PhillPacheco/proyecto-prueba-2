@@ -53,6 +53,11 @@ function create() {
     graphics.lineTo(400, 400);
     graphics.strokePath();
     
+    // DEBUG: Cuadrado rojo para verificar si Phaser está renderizando
+    const debugRect = this.add.rectangle(400, 200, 50, 50, 0xff0000);
+    debugRect.setAlpha(0.5);
+    debugRect.setDepth(1000);
+    
     // Create score text
     this.scoreTextUser = this.add.text(100, 20, '0', {
         fontSize: '2rem',
